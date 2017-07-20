@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 import MySQLdb
 import os
-db = MySQLdb.connect(host="localhost", user="root", passwd="admin", db="webcrawler")
+db = MySQLdb.connect(host="localhost", user="root", passwd="admin", db="base_de_dados")
 cursor = db.cursor()
 
-arq = open('1.txt', 'r')
+arq = open('ip.txt', 'r')
 texto = arq.readlines() 
 for ips in texto :
 	response = os.system("ping -c 1 " + ips)
